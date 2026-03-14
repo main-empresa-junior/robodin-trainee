@@ -1,11 +1,6 @@
 {% extends "base.html" %}
 
+{% block title %}Home{% endblock title %}
+
 {% block content %}
-<h1 class="title">
-  ROBODIN
-</h1>
-<a href="/">Início</a>
-<p><a href="{{ get_url(path='@/eventos/_index.md') }}">Eventos</a>.</p>
-<p><a href="{{ get_url(path='@/projetos/_index.md') }}">Projetos</a>.</p>
-<p><a href="{{ get_url(path='@/quem/quem.md') }}">Quem Somos Nós?</a>.</p>
 {% endblock content %}
