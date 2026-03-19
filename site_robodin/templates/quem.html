@@ -1,12 +1,17 @@
 {% extends "base.html" %}
 
-{% block content %}
+{% block extra_css %}
 <link rel="stylesheet" href="{{ get_url(path='css/style.css') }}">
+{% endblock extra_css %}
+
+{% block content %}
 <section id="presentation">
     <div class="container">
         <div class="presentation-content">
             <h1>Quem Somos Nós?</h1>
-            <div class="presentation-image"></div>
+            <div class="presentation-image">
+                <img src="#">
+            </div>
             <div class="presentation-text">
                 <p class="p-div">
                     Somos uma equipe apaixonada por tecnologia, educação e inovação,
