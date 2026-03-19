@@ -3,3 +3,28 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    background-color: #295351;
+    display: flex;
+    flex-direction: column;
+}
+
+.image {
+    width: 1033px;
+    height: 516px;
+    object-fit: cover;
+    border: solid;
+    border-width: 46px 97.5px;
+    border-color: #D9894A;
+    border-radius: 21px;;
+    background-position-x: -130px;
+
+}
+
+.presentation-content {
+    width: 1920px;
+    height: 1306px;
+    background-image: url("../Midia/background_cor.png");
+    object-fit: cover;
+}
