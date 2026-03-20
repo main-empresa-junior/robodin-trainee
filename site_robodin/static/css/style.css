@@ -23,8 +23,21 @@ body {
 }
 
 .presentation-content {
-    width: 1920px;
-    height: 1306px;
+    /* width: 100vw;
+    height: 100vh; */
     background-image: url("../Midia/background_cor.png");
     object-fit: cover;
+    background-position: center;
+}
+
+.texto {
+    color: #fff;
+    text-align: justify;
+    font-family: Montserrat;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
