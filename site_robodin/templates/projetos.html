@@ -1,14 +1,25 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="title">
-  {{ section.title }}
-</h1>
-<ul>
-  <!-- If you are using pagination, section.pages will be empty.
-       You need to use the paginator object -->  
-  {% for page in section.pages %}
-  <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
-  {% endfor %}
-</ul>
+<section>
+    <div class="title-container">
+        <h1 class="title-badge">Projetos</h1>
+    </div>
+    
+    <div class="grid-projetos">
+        {% for page in section.pages %}
+        <a href="{{ page.permalink }}" class="card">
+            <img src="{{ page.extra.imagem }}" alt="{{ page.title }}">
+            
+            <div class="card-content">
+                <h3 class="card-title">{{ page.title }}</h3>
+                
+                <div class="card-status">
+                    <span class="status-badge">{{ page.extra.status }}</span>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</section>
 {% endblock content %}

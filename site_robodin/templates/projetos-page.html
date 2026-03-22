@@ -1,9 +1,49 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="title">
-  {{ page.title }}
-</h1>
-<p class="subtitle"><strong>{{ page.date }}</strong></p>
-{{ page.content | safe }}
+<div class="projeto-container">
+    
+    <div class="projeto-main">
+        
+        <div class="projeto-hero">
+            <h1 class="projeto-titulo">{{ page.title }}</h1>
+            <img src="{{ page.extra.imagem }}" alt="{{ page.title }}" class="projeto-imagem">
+            <div class="projeto-data">
+                📅 
+                {% if page.date %}
+                    {{ page.date | date(format="%d de %B de %Y") }}
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="projeto-conteudo">
+            <h2>Sobre o Projeto</h2>
+            {{ page.content | safe }}
+        </div>
+    </div>
+
+    <aside class="projeto-sidebar">
+        <h2>Outros Projetos</h2>
+        <div class="sidebar-lista">
+            {# O Zola busca os projetos e pega os 4 primeiros para a lateral #}
+            {% set secao_projetos = get_section(path="projetos/_index.md") %}
+            
+            {% for projeto in secao_projetos.pages | slice(end=4) %}
+                {# Essa condição impede que o projeto atual apareça na lista de "Outros" #}
+                {% if projeto.permalink != page.permalink %}
+                <a href="{{ projeto.permalink }}" class="sidebar-item">
+                    <img src="{{ projeto.extra.imagem }}" alt="{{ projeto.title }}">
+                    <div class="sidebar-item-info">
+                        <h4>{{ projeto.title }}</h4>
+                        {% if projeto.date %}
+                        <span>{{ projeto.date | date(format="%d/%m/%Y") }}</span>
+                        {% endif %}
+                    </div>
+                </a>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </aside>
+
+</div>
 {% endblock content %}
