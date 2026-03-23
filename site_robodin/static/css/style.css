@@ -98,6 +98,7 @@ h2 {
     flex-direction: column;
     align-items: center;
 }
+
 .journey-text {
     background-color: #D9894A;
     width: 78rem;
@@ -113,8 +114,51 @@ h2 {
     margin-top: 30px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    row-gap: 80px;
     place-items: center;
+    padding: 0px 160px;
+}
+
+.values {
+    background-color: #92ABA5;
+    width: 25rem;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.image-card {
+    width: 18rem;
+    height: 18rem;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.text-card.texto {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.fade.discipline {
+    top: -35px;
+    left: -35px;
+}
+
+.fade.resilience {
+    top: -35px;
+    left: 35px;
+}
+
+.fade.organization {
+    top: 35px;
+    left: -35px;
+}
+
+.fade.proactivity {
+    top: 35px;
+    left: 35px;
 }
 
 .vision-content {
