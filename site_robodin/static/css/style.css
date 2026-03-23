@@ -8,6 +8,7 @@ body {
     background-color: #295351;
     display: flex;
     flex-direction: column;
+    padding-bottom: 50px;
 }
 
 .hero{
