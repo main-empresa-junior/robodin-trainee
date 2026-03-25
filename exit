@@ -1,0 +1,58 @@
+[33mcommit fce27a5bcb413da80a2847bf125217077fd8685c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mgustavo[m[33m, [m[1;31morigin/gustavo[m[33m)[m
+Author: Gustavo <gbgubento007@gmail.com>
+Date:   Thu Mar 19 13:20:18 2026 -0300
+
+    Alterações na parte superior da página
+
+[33mcommit 1dff955c8fb7e31a3b7a42f1f5959c8ccaf29b49[m
+Author: Gustavo <gbgubento007@gmail.com>
+Date:   Thu Mar 19 12:20:44 2026 -0300
+
+    Inserção do css
+
+[33mcommit 25d0b9b615538ca23c5b9d18204e030fdc3c992f[m
+Author: Gustavo <gbgubento007@gmail.com>
+Date:   Mon Mar 16 13:03:38 2026 -0300
+
+    não sei usar o Zola
+
+[33mcommit 18d48445a2b1ddffeed183b10cf6e7bf3c1bc5a3[m
+Author: Gustavo <gbgubento007@gmail.com>
+Date:   Mon Mar 16 12:38:11 2026 -0300
+
+    remoção do fundo transparente
+
+[33mcommit 3475f2f34f269c150b765b6e1a217605bc44da43[m
+Merge: 5dd7d82 07cd832
+Author: Gustavo <gbgubento007@gmail.com>
+Date:   Mon Mar 16 12:29:58 2026 -0300
+
+    Merge branch 'main' into gustavo
+
+[33mcommit 5dd7d8213f629b95765a30365fda43e859b57ce7[m
+Author: Gustavo <gbgubento007@gmail.com>
+Date:   Mon Mar 16 12:12:46 2026 -0300
+
+    estrutura base aqui
+
+[33mcommit 07cd83224407f18f45ffd88edffad370cf440f8f[m[33m ([m[1;31morigin/tobias[m[33m, [m[1;31morigin/nuno[m[33m, [m[1;31morigin/calazans[m[33m, [m[1;31morigin/JG[m[33m)[m
+Author: nuno-m-abilio <nuno.m.abilio.enactusuem@gmail.com>
+Date:   Wed Mar 11 22:47:18 2026 -0300
+
+    Static Midia Adicionada
+    
+    Adição das imagens organizadas pelo Tobias na organização padrão que deve ser seguida. Além disso, adição de um gitignore com a pasta public (que só tem arquivos de compilação)
+
+[33mcommit 1bdc9a94f56993a5ab210df1654c82810ff5b894[m
+Author: nuno-m-abilio <nuno.m.abilio.enactusuem@gmail.com>
+Date:   Fri Feb 27 00:35:32 2026 -0300
+
+    Estrutura de Arquivos
+    
+    Configuração inicial da estrutura de arquivos que serão necessários para o projeto conforme o protótipo. Ainda não mexi em nada em sass e static, é um dos próximos passos
+
+[33mcommit f7c70ee5ef6822022f4353ed55fd6c74c85e5010[m
+Author: Nuno Miguel Mendonça Abilio <nuno.m.abilio.main@gmail.com>
+Date:   Thu Feb 26 14:16:03 2026 -0300
+
+    Initial commit

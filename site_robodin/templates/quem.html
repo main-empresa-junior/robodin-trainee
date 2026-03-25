@@ -1,10 +1,97 @@
 {% extends "base.html" %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{{ get_url(path='css/style.css') }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+{% endblock extra_css %}
+
 {% block content %}
-<section class="section">
-    <div class="container">
-        <h1>Quem Nós Somos?</h1>
-        <p>Conteúdo sobre a equipe de robótica aqui...</p>
+<section id="presentation">
+    <div class="hero">
+        <h1>Quem Somos Nós?</h1>
+        <div class="presentation-image">
+            <img class ="image" src="../Midia/grupo_robodin.png" alt="Imagem do grupo Robodin">
+        </div>
+        <div class="container-card">
+            <div class="fade"></div>
+            <div class="presentation-text formatting-area">
+                <p class="texto">
+                    Somos uma equipe apaixonada por tecnologia, educação e inovação,
+                    dedicada a promover o acesso ao conhecimento em robótica e programação.
+                    Nossa missão é inspirar e capacitar a próxima geração de criadores,
+                    desenvolvedores e inventores através de projetos práticos e experiências
+                    educacionais transformadoras.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="journey">
+    <div class="journey-content">
+        <h2>Como Chegamos Até Aqui ?</h2>
+        <div class="container-card">
+            <div class="fade journey"></div>
+            <div class="journey-text formatting-area">
+                <p class="texto">
+                    Nossa jornada começou com um grupo de estudantes e profissionais que
+                    identificaram a necessidade de aproximar a tecnologia da educação de forma
+                    prática e acessível. Começamos com pequenos workshops e, através  de muito trabalho
+                    e dedicação, crescemos para nos tornar uma referência  em capacitação tecnológica,
+                    formando parcerias com instituições  educacionais e empresas do setor.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <h2>Nossos Valores</h2>
+    <div class="values-cards">
+        <div class="container-card">
+            <div class="fade discipline"></div>
+            <div class="values formatting-area">
+                <p class="text-card texto">Disciplina</p>
+                <img class="image-card" src="../Midia/disciplina.jpeg" alt="imagem de representação de Disciplina">
+            </div>
+        </div>
+        <div class="container-card">
+            <div class="fade resilience"></div>
+            <div class="values formatting-area">
+                <p class="text-card texto">Resiliência</p>
+                <img class="image-card" src="../Midia/resiliencia.jpeg" alt="Imagem de representação de Resiliência">
+            </div>
+        </div>
+        <div class="container-card">
+            <div class="fade organization"></div>
+            <div class="values formatting-area">
+                <p class="text-card texto">Organização</p>
+                <img class="image-card" src="../Midia/organizacao.jpeg" alt="Imagem de representação de Organização">
+            </div>
+        </div>
+        <div class="container-card">
+            <div class="fade proactivity"></div>
+            <div class="values formatting-area">
+                <p class="text-card texto">Proatividade</p>
+                <img class="image-card" src="../Midia/proatividade.jpeg" alt="imagem de representação de Proatividade">
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="vision-content">
+        <h2>Para Onde Vamos</h2>
+        <div class="container-card">
+            <div class="vision fade"></div>
+            <div class="vision-text formatting-area">
+                <p class="texto">
+                    Buscamos expandir nosso impacto, desenvolvendo novos programas de
+                    capacitação, ampliando nossa rede de colaboradores e criando um
+                    ecossistema inovador onde educação e tecnologia se encontram para
+                    construir um futuro mais criativo e tecnologicamente avançado.
+                </p>
+            </div>
+        </div>
     </div>
 </section>
 {% endblock content %}
