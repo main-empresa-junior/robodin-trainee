@@ -4,7 +4,11 @@
   <meta charset="utf-8">
     {% block extra_css %}
     {% endblock extra_css %}
-  <title>Home | Robodin</title>
+  <title>
+    {% block title %}
+    Home | Robodin
+    {% endblock title %}
+  </title>
 </head>
 <body>
     {% include "partials/header.html" %}
