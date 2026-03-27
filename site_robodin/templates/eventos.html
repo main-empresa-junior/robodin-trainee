@@ -8,99 +8,22 @@
     <h1>Nossas atividades</h1>
 </section>
 
-<section class="atividade-card">
+{% for page in section.pages %}
+<section class="atividade-card {% if loop.index is even %}invertido{% endif %}">
     <div class="card-container">
 
         <div class="card-image">
-            <img src="/Midia/cursos/arduino.jpg" alt="Arduino">
-            <span class="status">Realizado</span>
+            <img src="{{ page.extra.imagem }}" alt="{{ page.title }}">
+            <span class="status">{{ page.extra.status }}</span>
         </div>
 
         <div class="card-content">
-            <h2>Capacitação de Arduino</h2>
-			<p>
-                Descubra o universo da programação embarcada e da eletrônica com
-                nossa capacitação de Arduino. Voltado para iniciantes, o curso aborda
-                desde a introdução à plataforma Arduino até a criação de projetos práticos
-                com sensores, atuadores e comunicação serial. Os participantes aprenderão
-                a montar circuitos, programar microcontroladores e desenvolver
-                protótipos funcionais, aplicando conceitos de lógica e
-                solução de problemas em um ambiente hands-on.
-			</p>
+            <h2>{{ page.title }}</h2>
+            <p>{{ page.content | safe }}</p>
         </div>
 
     </div>
 </section>
-
-<section class="atividade-card">
-    <div class="card-container">
-
-        <div class="card-content">
-            <h2>Secomp</h2>
-            <p>
-                A Semana de Computação (Secomp) é um evento anual que promove a
-                integração entre academia, mercado e comunidade por meio de palestras,
-                minicursos, workshops e competições. Com foco em inovação e tecnologia,
-                o evento traz especialistas para discutir temas como inteligência
-                artificial, desenvolvimento de software, segurança cibernética e
-                tendências do setor. Uma oportunidade única para networking,
-                aprendizado e troca de experiências.
-            </p>
-        </div>
-
-        <div class="card-image">
-            <img src="/Midia/cursos/secomp.jpg" alt="Secomp">
-            <span class="status">Realizado</span>
-        </div>
-
-    </div>
-</section>
-
-<section class="atividade-card">
-    <div class="card-container">
-
-        <div class="card-image">
-            <img src="/Midia/cursos/c++.jpg" alt="C++">
-            <span class="status">Realizado</span>
-        </div>
-
-        <div class="card-content">
-            <h2>Capacitação de C++</h2>
-			<p>
-                Aprenda uma das linguagens de programação mais utilizadas no
-                desenvolvimento de sistemas de alto desempenho, games e aplicações
-                embarcadas. Esta capacitação oferece uma base sólida em sintaxe,
-                estruturas de dados, orientação a objetos e gerenciamento de memória.
-                Ideal para quem deseja ingressar em áreas que exigem controle e
-                eficiência, como robótica, IoT e programação de sistemas.
-			</p>
-        </div>
-
-    </div>
-</section>
-
-<section class="atividade-card">
-    <div class="card-container">
-
-        <div class="card-content">
-            <h2>Curso de Eletrônica Básica</h2>
-            <p>
-                Entenda os princípios fundamentais da eletrônica com um curso
-                projetado para quem está começando. Por meio de aulas teóricas e
-                práticas, você aprenderá sobre componentes eletrônicos, leis
-                fundamentais como Lei de Ohm e Leis de Kirchhoff, montagem de circuitos
-                em protoboard, uso de multímetro e interpretação de diagramas.
-                Ao final, estará apto a desenvolver e analisar circuitos eletrônicos
-                simples e dar os primeiros passos em projetos de automação e robótica.
-            </p>
-        </div>
-
-        <div class="card-image">
-            <img src="/Midia/cursos/eletronica.jpg" alt="Eletrônica">
-            <span class="status">Realizado</span>
-        </div>
-
-    </div>
-</section>
+{% endfor %}
 
 {% endblock content %}
