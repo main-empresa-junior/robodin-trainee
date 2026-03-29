@@ -28,12 +28,12 @@ jobs:
           tool: zola
 
       - name: Build site
-        working-directory: ./site_robodin
         run: zola build
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./site_robodin/public
+          path: ./public
 
       - name: Deploy
         id: deployment
