@@ -36,257 +36,74 @@
                         <h2>Eventos</h2>
                     </div>
                     <div class="botao">
-                            <button>Ver mais</button>
+                        <a href="{{ get_url(path='eventos/_index.md') }}"><button>Ver mais</button></a>
                     </div>
                 </div>
 
                 <div class="container swiper">
                     <div class="card-wrapper">
                         <ul class="card-list swiper-wrapper">
-                            <!--    Card #01    -->
+                            {% set section_eventos = get_section(path="eventos/_index.md") %}
+                            {% for page in section_eventos.pages %}
                             <li class="card-item swiper-slide">
-                                <a class="azul" href="#">
-                                    <img src="Midia/cursos/curso_arduino.png" alt="Card Image">
+                                {# Usa 'azul' como padrão se 'cor_do_card' não existir no MD #}
+                                <a class="{{ page.extra.cor_do_card | default(value='azul') }}">
+                                    <img src="{{ get_url(path=page.extra.imagem | trim_start_matches(pat='/')) }}" alt="{{ page.title }}">
                                     
                                     <div class="textCard">
-                                        <h3>Capacitação de Arduino</h3>
-                                        <p class="desc">Aprenda os fundamentos da programação e eletrônica com Arduino  nesta 
-                                            capacitação prática. Desenvolvemos este curso para iniciantes que  desejam explorar 
-                                            o mundo da robótica e automação, desde conceitos  básicos até a criação de seus primeiros projetos interativos.</p>
+                                        <h3>{{ page.title }}</h3>
+                                        <p class="desc">{{ page.extra.abstract }}</p>
                                     </div>
 
                                     <div class="info">
-                                        <p class="data">17/03/2025</p>
-                                        <p class="topico realizado">Realizado</p>
+                                        <p class="data">{{ page.date | date(format="%d/%m/%Y") }}</p>
+                                        {# Transforma "Em andamento" em "andamento" e "Realizado" em "realizado" para o CSS #}
+                                        <p class="topico {{ page.extra.status | lower | replace(from='em ', to='') }}">{{ page.extra.status }}</p>
                                     </div>
-                                    
                                 </a>
                             </li>
-                            <!------------------->
-                            <!--    Card #02    -->
-                            <li class="card-item swiper-slide">
-                                <a class="laranja" href="#">
-                                    <img src="Midia/cursos/curso_hackaton.png" alt="Card Image">
-                                    
-                                    <div class="textCard">
-                                        <h3>Secomp</h3>
-                                        <p class="desc">A Semana de Computação reúne profissionais, acadêmicos 
-                                            e  entusiastas da tecnologia para compartilhar conhecimentos e tendências  
-                                            do mercado. Palestras, workshops e networking com especialistas das  
-                                            principais empresas de tecnologia do país.</p>
-                                    </div>
-
-                                    <div class="info">
-                                        <p class="data">17/03/2025</p>
-                                        <p class="topico andamento">Em andamento</p>
-                                    </div>
-                                    
-                                </a>
-                            </li>
-                            <!------------------->
-                            <!--    Card #03    -->
-                            <li class="card-item swiper-slide">
-                                <a class="azul" href="#">
-                                    <img src="Midia/cursos/curso_c.png" alt="Card Image">
-                                    
-                                    <div class="textCard">
-                                        <h3>Capacitação de C</h3>
-                                        <p class="desc">Domine uma das linguagens de programação mais poderosas e  
-                                            versáteis do mercado. Esta capacitação aborda desde sintaxe básica até  
-                                            conceitos avançados como orientação a objetos, manipulação de memória e  
-                                            desenvolvimento de aplicações de alto desempenho.</p>
-                                    </div>
-
-                                    <div class="info">
-                                        <p class="data">17/03/2025</p>
-                                        <p class="topico realizado">Realizado</p>
-                                    </div>
-                                    
-                                </a>
-                            </li>
-                            <!------------------->
-                            <!--    Card #04    -->
-                            <li class="card-item swiper-slide">
-                                <a class="laranja" href="#">
-                                    <img src="Midia/cursos/curso_eletronica.png" alt="Card Image">
-                                    
-                                    <div class="textCard">
-                                        <h3>Curso de Eletrônica Básica</h3>
-                                        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
-                                            do eiusmod  tempor incididunt ut labore et dolore magna aliqua. Ut enim 
-                                            ad minim  veniam, quis nostrud exercitation ullamco laboris nisi.</p>
-                                    </div>
-
-                                    <div class="info">
-                                        <p class="data">17/03/2025</p>
-                                        <p class="topico aberto">Aberto</p>
-                                    </div>
-                                    
-                                </a>
-                            </li>
-                            <!------------------->
+                            {% endfor %}
                         </ul>
-
                     </div>
                     <div class="swiper-pagination"></div>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
                 </div>
 
-            <div class="projetos">
-                <div class="titulo">
-                    <div class="vazio"></div>
-                    <div class="text">
-                        <h2>Projetos</h2>
+                <div class="projetos">
+                    <div class="titulo">
+                        <div class="vazio"></div>
+                        <div class="text">
+                            <h2>Projetos</h2>
+                        </div>
+                        <div class="botao">
+                            <a href="{{ get_url(path='projetos/_index.md') }}"><button>Ver mais</button></a>
+                        </div>
                     </div>
-                    <div class="botao">
-                            <button>Ver mais</button>
+
+                    <div class="cards">
+                        <ul>
+                            {% set section_projetos = get_section(path="projetos/_index.md") %}
+                            {% for page in section_projetos.pages %}
+                            <li class="card-item event-card">
+                                <a href="{{ page.permalink }}">
+                                    <img src="{{ get_url(path=page.extra.imagem | trim_start_matches(pat='/')) }}" alt="{{ page.title }}">
+                                    
+                                    <div class="textCard">
+                                        <h3>{{ page.title }}</h3>
+                                    </div>
+
+                                    <div class="info">
+                                        <p class="data"></p>
+                                        <p class="topico {{ page.extra.status | lower | replace(from='em ', to='') }}">{{ page.extra.status }}</p>
+                                    </div>
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ul>
                     </div>
                 </div>
-
-                <div class="cards">
-                    <ul>
-                            <!--    Card #01    -->
-                            <li class="card-item event-card">
-                                <a href="#">
-                                    <img src="Midia/projetos/estacao_meteorologica.png" alt="Card Image">
-                                    
-                                    <div class="textCard">
-                                        <h3>Estação meteorológica básica</h3>
-                                    </div>
-
-                                    <div class="info">
-                                        <p class="data"></p>
-                                        <p class="topico andamento">Em andamento</p>
-                                    </div>
-                                    
-                                </a>
-                            </li>
-                            <!------------------->
-                            <!--    Card #02    -->
-                            <li class="card-item event-card">
-                                <a href="#">
-                                    <img src="Midia/projetos/estacao_solar.png" alt="Card Image">
-                                    
-                                    <div class="textCard">
-                                        <h3>Mini estação solar guiada</h3>
-                                        </div>
-
-                                    <div class="info">
-                                        <p class="data"></p>
-                                        <p class="topico realizado">Realizado</p>
-                                    </div>
-                                    
-                                </a>
-                            </li>
-                            <!------------------->
-                            <!--    Card #03    -->
-                            <li class="card-item event-card">
-                                <a href="#">
-                                    <img src="Midia/projetos/matriz_LED.png" alt="Card Image">
-                                    
-                                    <div class="textCard">
-                                        <h3>Display de Mensagens em Matriz de LEDs</h3>
-                                        </div>
-
-                                    <div class="info">
-                                        <p class="data"></p>
-                                        <p class="topico andamento">Em andamento</p>
-                                    </div>
-                                    
-                                </a>
-                            </li>
-                            <!------------------->
-                            <!--    Card #04    -->
-                            <li class="card-item event-card">
-                                <a href="">
-                                    <img src="Midia/projetos/estacao_irrigacao.png" alt="Card Image">
-                                    
-                                    <div class="textCard">
-                                        <h3>Mini Estação de Irrigação Automática</h3>
-                                        </div>
-
-                                    <div class="info">
-                                        <p class="data"></p>
-                                        <p class="topico realizado">Realizado</p>
-                                    </div>
-                                    
-                                </a>
-                            </li>
-                            <!------------------->
-                            <!--    Card #05    -->
-                            <li class="card-item event-card">
-                                <a href="#">
-                                    <img src="Midia/projetos/alarme_prox.png" alt="Card Image">
-                                    
-                                    <div class="textCard">
-                                        <h3>Alarme de Proximidade</h3>
-                                        </div>
-
-                                    <div class="info">
-                                        <p class="data"></p>
-                                        <p class="topico realizado">Realizado</p>
-                                    </div>
-                                    
-                                </a>
-                            </li>
-                            <!------------------->
-                            <!--    Card #06    -->
-                            <li class="card-item event-card">
-                                <a href="#">
-                                    <img src="Midia/projetos/seguidor_linha.png" alt="Card Image">
-                                    
-                                    <div class="textCard">
-                                        <h3>Robô Seguidor de Linha Simples</h3>
-                                        </div>
-
-                                    <div class="info">
-                                        <p class="data"></p>
-                                        <p class="topico andamento">Em andamento</p>
-                                    </div>
-                                    
-                                </a>
-                            </li>
-                            <!------------------->
-                            <!--    Card #07    -->
-                            <li class="card-item event-card">
-                                <a href="#">
-                                    <img src="Midia/projetos/sensor_chuva.png" alt="Card Image">
-                                    
-                                    <div class="textCard">
-                                        <h3>Sensor de Chuva</h3>
-                                        </div>
-
-                                    <div class="info">
-                                        <p class="data"></p>
-                                        <p class="topico realizado">Realizado</p>
-                                    </div>
-                                    
-                                </a>
-                            </li>
-                            <!------------------->
-                            <!--    Card #08    -->
-                            <li class="card-item event-card">
-                                <a href="#">
-                                    <img src="Midia/projetos/sensor_estacionamento.png" alt="Card Image">
-                                    
-                                    <div class="textCard">
-                                        <h3>Sistema de Estacionamento com LEDs</h3>
-                                        </div>
-
-                                    <div class="info">
-                                        <p class="data"></p>
-                                        <p class="topico realizado">Realizado</p>
-                                    </div>
-                                    
-                                </a>
-                            </li>
-                            <!------------------->
-                    </ul>
-                </div>
-            
             </div>
-        
         </div>
     </section>
 
@@ -405,6 +222,6 @@
 
     <!--Script carrossel-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <script src="scripts/script.js"></script>
+    <script src="{{ get_url(path='scripts/script.js') }}"></script>
 
 {% endblock content %}
