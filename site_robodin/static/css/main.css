@@ -1,21 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-:root {
-    --larandin: #CF711E;
-    --azuldin: #295351;
-    --azulescurin: #012324;
-}
-
 /*-------------------------------------------*/
-/*              CONFIG GERAL                */
-/*-------------------------------------------*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-/*-------------------------------------------*/
-/*          BACKGROUND + HERO - Textos       */
+/* BACKGROUND + HERO - Textos       */
 /*-------------------------------------------*/
 
 .firstBackground{
@@ -51,14 +35,13 @@
 }
 
 .inicio .textBox .title h2{
-    font-family: 'Montserrat';
     font-size: 130px;
     font-weight: 700;
-    color: white;
+    color: var(--branco);
 }
 
 span{
-    color: var(--larandin);
+    color: var(--laranja-principal);
 }
 
 .inicio .textBox .title .robodin{
@@ -67,7 +50,7 @@ span{
 
 .inicio .textBox p{
     font-size: 22px;
-    color: white;
+    color: var(--branco);
     margin-bottom: 5px;
 }
 
@@ -87,10 +70,8 @@ span{
     display: inline-block;
     padding: 12px 35px;
     border-radius: 40px;
-    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 20px;
-    text-decoration: none;
     transition: all 0.3s ease;
     cursor: pointer;
     text-align: center;
@@ -98,24 +79,24 @@ span{
 }
 
 .inicio .buttons .contate-nos{
-    color: white;
+    color: var(--branco);
     background: transparent;
-    border-color: white;
+    border-color: var(--branco);
 }
 
 .inicio .buttons .contate-nos:hover{
-    background: white;
-    color: var(--azuldin);
+    background: var(--branco);
+    color: var(--verde-primario);
 }
 
 .inicio .buttons .saibaMais{
-    background-color: var(--larandin);
-    color: white;
-    border-color: var(--larandin);
+    background-color: var(--laranja-principal);
+    color: var(--branco);
+    border-color: var(--laranja-principal);
 }
 
 .inicio .buttons .saibaMais:hover{
-    color: var(--larandin);
+    color: var(--laranja-principal);
     background: transparent;
 }
 
@@ -140,7 +121,6 @@ span{
     justify-content: left;
 }
 
-
 .cards-section .text{
     display: flex;
     align-items: center;
@@ -149,7 +129,6 @@ span{
 
 .cards-section .text h2{
     flex: 2;
-    font-family: 'Montserrat';
     font-weight: 600;
     font-size: 50px;
 }
@@ -165,16 +144,15 @@ span{
     border: none;
     border-radius: 30px;
     padding: 5px 20px;
-    background-color: var(--larandin);
-    color: white;
+    background-color: var(--laranja-principal);
+    color: var(--branco);
     font-size: 20px;
-    
 }
 
 .cards-section .botao button:hover{
     background: none;
-    border: 3px solid var(--larandin);
-    color: var(--larandin);
+    border: 3px solid var(--laranja-principal);
+    color: var(--laranja-principal);
 }
 
 /*-------------------------------------------*/
@@ -184,6 +162,7 @@ span{
 .card-item .info .data{
     justify-self: start;
 }
+
 .card-item .info .topico{
     justify-self: end;
     padding: 4px 16px;
@@ -191,21 +170,9 @@ span{
     font-weight: 500;
     border-radius: 50px;
     width: fit-content;
-}
-
-.card-item .info .topico.realizado{
-    color: #CF711E;
-    background: rgb(209, 191, 168);
-}
-
-.card-item .info .topico.aberto{
-    background-color: white;
-    color: var(--azuldin);
-}
-
-.card-item .info .topico.andamento{
-    color: white;
-    background: gray;
+    color: var(--branco);
+    background: var(--laranja-principal);
+    
 }
 
 /*-------------------------------------------*/
@@ -223,6 +190,7 @@ span{
 .card-wrapper{
     overflow: hidden;
 }
+
 .card-item{
     list-style: none;
     display: flex;
@@ -236,19 +204,19 @@ span{
     flex-direction: column;
     padding: 18px;
     border-radius: 12px;
-    text-decoration: none;
-    color: black;
+    color: #000000;
     height: 480px;
 }
+
 .card-item img{
     width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
     border-radius: 10px;
 }
+
 .card-item .textCard h3{
     margin-top: 10px;
-    font-family: 'Montserrat';
     font-size: 25px;
 }
 
@@ -258,7 +226,6 @@ span{
     flex-grow: 1;
 }
 
-
 .card-item .info{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -266,18 +233,17 @@ span{
     margin-top: auto;
 }
 
-/*Cores dos cards*/
-
 .eventos .card-list .card-item .azul{
-    background: #2A8C8D;
+    background: var(--verde-primario);
 }
 
 .eventos .card-list .card-item .laranja{
-    background: #D9894A;
+    background: var(--laranja-principal);
 }
 
+
 /*-------------------------------------------*/
-/*          SECÇÃO CARDS - PROJETOS          */
+/* SECÇÃO CARDS - PROJETOS          */
 /*-------------------------------------------*/
 
 .projetos{
@@ -292,7 +258,6 @@ span{
     display: flex;
     width: 100%;
 }
-
 
 .projetos .cards a{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
@@ -341,14 +306,11 @@ span{
     width: 50%;
 }
 
-/*Texto titulo*/
-
 .sobreNos .text .title{
-    font-family: 'Montserrat';
     font-size: 60px;
     font-weight: 700;
-    color: white;
-    background: var(--azuldin);
+    color: var(--branco);
+    background: var(--verde-primario);
     padding: 10px;
 }
 
@@ -356,12 +318,10 @@ span{
     text-align: center;
 }
 
-/*Texto informativo*/
-
 .sobreNos .text .textInfo{
     margin-top: 5%;
-    color: white;
-    background: var(--azuldin);
+    color: var(--branco);
+    background: var(--verde-primario);
     padding: 20px;
     height: auto; 
 }
@@ -369,7 +329,6 @@ span{
 .sobreNos .text .textInfo p{
     font-size: 1.5rem;
 }
-/*Foto*/
 
 .sobreNos .foto{
     width: 50%;
@@ -388,12 +347,12 @@ span{
 
 .participar{
     min-height: 100vh;
-    background-color: var(--azulescurin);
+    background-color: var(--verde-escuro);
 }
 
 .participar .title h3{
     text-align: center;
-    color: white;
+    color: var(--branco);
     font-size: 60px;
     padding: 5px;
 }
@@ -414,25 +373,24 @@ span{
     justify-content: center;
     align-items: center;
     gap: 20px;
-    display: flex;
     flex-wrap: wrap;
     margin-top: 20px;
 }
+
 .motivos .motivos-card .motivo{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--larandin);
+    background-color: var(--laranja-principal);
     width: 400px;
     height: 300px;
     margin: 10px;
-    color: white;
+    color: var(--branco);
     border-radius: 20px;
 }
 
 .motivos .motivos-card .motivo .numero{
-    font-family: 'Montserrat';
     font-weight: 600;
     font-size: 30px;
     text-align: center;
@@ -461,15 +419,14 @@ span{
 
 .cardFinal .cartao{
     width: 40%;
-    background-color: var(--azuldin);
-    color: white;
+    background-color: var(--verde-primario);
+    color: var(--branco);
     border-radius: 20px;
 }
 
 .cardFinal .cartao .title{
     text-align: center;
     margin-top: 25px;
-    font-family: 'Montserrat';
     font-weight: 700;
     font-size: 40px;
 }
