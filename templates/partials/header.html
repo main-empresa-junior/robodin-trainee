@@ -1,9 +1,9 @@
 <header>
     <div class="logo">
-        <a href="/">ROBODIN</a>
+        <a href="{{ get_url(path='/') }}">ROBODIN</a>
     </div>
     <nav class="nav-links">
-        <a href="/">Home</a>
+        <a href="{{ get_url(path='/') }}">Home</a>
         <a href="{{ get_url(path='@/projetos/_index.md') }}">Projetos</a>
         <a href="{{ get_url(path='@/eventos/_index.md') }}">Eventos</a>
         <a href="{{ get_url(path='@/quem/_index.md') }}">Quem somos nós</a>
