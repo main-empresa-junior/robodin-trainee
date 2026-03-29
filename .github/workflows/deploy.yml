@@ -28,7 +28,7 @@ jobs:
           tool: zola
 
       - name: Build site
-        run: zola build --root site-robodin
+        run: zola build --root site_robodin
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
