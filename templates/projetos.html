@@ -17,7 +17,7 @@
     <div class="grid-projetos">
         {% for page in section.pages %}
         <a href="{{ page.permalink }}" class="card">
-            <img src="{{ page.extra.imagem }}" alt="{{ page.title }}">
+            <img src="{{ get_url(path=page.extra.imagem | trim_start_matches(pat='/')) }}" alt="{{ page.title }}">
             
             <div class="card-content">
                 <h3 class="card-title">{{ page.title }}</h3>
