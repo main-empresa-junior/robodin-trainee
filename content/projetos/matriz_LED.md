@@ -5,7 +5,7 @@ weight = 80
 template = "projetos-page.html"
 
 [extra]
-imagem = "/Midia/projetos/matriz_LED.png"
+imagem = "Midia/projetos/matriz_LED.png"
 status = "Em andamento..."
 +++
 
