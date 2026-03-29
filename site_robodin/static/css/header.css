@@ -1,13 +1,9 @@
-/* =========================================
-   Header (Cabeçalho Superior)
-   ========================================= */
 header {
-    background-color: #2D4F4F; /* Cor verde/petróleo */
+    background-color: var(--verde-primario);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    font-family: 'Inter', 'Roboto', sans-serif;
 }
 
 header a {
@@ -15,7 +11,7 @@ header a {
 }
 
 .logo a {
-    color: white;
+    color: var(--branco);
     font-size: 1.8rem;
     font-weight: bold;
     letter-spacing: 1px;
@@ -27,12 +23,12 @@ header a {
 }
 
 .nav-links a {
-    color: #D68E54; /* Cor laranja dos links */
+    color: var(--laranja-principal);
     font-size: 1.1rem;
     font-weight: bold;
     transition: 0.3s;
 }
 
 .nav-links a:hover {
-    color: white; /* Fica branco ao passar o mouse */
+    color: var(--branco);
 }
