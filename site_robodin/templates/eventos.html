@@ -6,14 +6,27 @@
 {% endblock extra_css %}
 
 {% block content %}
-<h1 class="title">
-  {{ section.title }}
-</h1>
-<ul>
-  <!-- If you are using pagination, section.pages will be empty.
-       You need to use the paginator object -->  
-  {% for page in section.pages %}
-  <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
-  {% endfor %}
-</ul>
+
+<section class="hero">
+    <h1>Nossas atividades</h1>
+</section>
+
+{% for page in section.pages %}
+<section class="atividade-card {% if loop.index is even %}invertido{% endif %}">
+    <div class="card-container">
+
+        <div class="card-image">
+            <img src="{{ page.extra.imagem }}" alt="{{ page.title }}">
+            <span class="status">{{ page.extra.status }}</span>
+        </div>
+
+        <div class="card-content">
+            <h2>{{ page.title }}</h2>
+            <p>{{ page.content | safe }}</p>
+        </div>
+
+    </div>
+</section>
+{% endfor %}
+
 {% endblock content %}
