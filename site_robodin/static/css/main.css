@@ -1,5 +1,489 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --larandin: #CF711E;
+    --azuldin: #295351;
+    --azulescurin: #012324;
+}
+
+/*-------------------------------------------*/
+/*              CONFIG GERAL                */
+/*-------------------------------------------*/
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+/*-------------------------------------------*/
+/*          BACKGROUND + HERO - Textos       */
+/*-------------------------------------------*/
+
+.firstBackground{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(../Midia/background_cor.png);
+    background-size: cover;
+    max-height: 100vh;
+}
+
+.inicio{
+    position: relative;
+    width: 100%;
+    padding: 100px;
+    margin-top: 5%;
+}
+
+.inicio .textBox{
+    position: relative;
+    max-width: 600px;
+}
+
+.inicio .textBox .title{
+    position: relative;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.inicio .textBox .title h2{
+    font-family: 'Montserrat';
+    font-size: 130px;
+    font-weight: 700;
+    color: white;
+}
+
+span{
+    color: var(--larandin);
+}
+
+.inicio .textBox .title .robodin{
+    max-width: 80px;
+}
+
+.inicio .textBox p{
+    font-size: 22px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+/*-------------------------------------------*/
+/*          BACKGROUND + HERO - Botões       */
+/*-------------------------------------------*/
+
+.inicio .buttons{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.inicio .buttons button{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 35px;
+    border-radius: 40px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.inicio .buttons .contate-nos{
+    color: white;
+    background: none;
+    border: 3px solid white;
+}
+
+.inicio .buttons .contate-nos:hover{
+    background: white;
+    color: var(--azuldin);
+}
+
+.inicio .buttons .saibaMais{
+    background-color: var(--larandin);
+    color: white;
+    border: 3px solid var(--larandin);
+}
+
+.inicio .buttons .saibaMais:hover{
+    color: var(--larandin);
+    background: none;
+}
+
+/*-------------------------------------------*/
+/*            SECÇÃO CARDS - GERAL           */
+/*-------------------------------------------*/
+
+.cards-section{
+    display: block;
+}
+
+.titulo{
+    display: flex;
+}
+
+.vazio, .botao{
+    flex: 1;
+}
+
+.vazio{
+    display: flex;
+    justify-content: left;
+}
+
+
+.cards-section .text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards-section .text h2{
+    flex: 2;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 50px;
+}
+
+.cards-section .botao{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.cards-section .botao button{
+    margin-right: 50px;
+    border: none;
+    border-radius: 30px;
+    padding: 5px 20px;
+    background-color: var(--larandin);
+    color: white;
+    font-size: 20px;
+    
+}
+
+.cards-section .botao button:hover{
+    background: none;
+    border: 3px solid var(--larandin);
+    color: var(--larandin);
+}
+
+/*-------------------------------------------*/
+/*           SECÇÃO CARDS - TOPICOS + DATA          */
+/*-------------------------------------------*/
+
+.card-item .info .data{
+    justify-self: start;
+}
+.card-item .info .topico{
+    justify-self: end;
+    padding: 4px 16px;
+    margin: 8px 0px 14px;
+    font-weight: 500;
+    border-radius: 50px;
+    width: fit-content;
+}
+
+.card-item .info .topico.realizado{
+    color: #CF711E;
+    background: rgb(209, 191, 168);
+}
+
+.card-item .info .topico.aberto{
+    background-color: white;
+    color: var(--azuldin);
+}
+
+.card-item .info .topico.andamento{
+    color: white;
+    background: gray;
+}
+
+/*-------------------------------------------*/
+/*           SECÇÃO CARDS - EVENTOS          */
+/*-------------------------------------------*/
+
+.conteudo{
+    display: flex;
+}
+
+.container{
+    margin-top: 10px;
+}
+
+.card-wrapper{
+    overflow: hidden;
+}
+.card-item{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-item a{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: black;
+    height: 480px;
+}
+.card-item img{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.card-item .textCard h3{
+    margin-top: 10px;
+    font-family: 'Montserrat';
+    font-size: 25px;
+}
+
+.card-item .textCard .desc{
+    font-weight: 300;
+    margin-top: 10px;
+    flex-grow: 1;
+}
+
+
+.card-item .info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-top: auto;
+}
+
+/*Cores dos cards*/
+
+.eventos .card-list .card-item .azul{
+    background: #2A8C8D;
+}
+
+.eventos .card-list .card-item .laranja{
+    background: #D9894A;
+}
+
+/*-------------------------------------------*/
+/*          SECÇÃO CARDS - PROJETOS          */
+/*-------------------------------------------*/
+
+.projetos{
+    padding: 30px;
+}
+
+.projetos .titulo{
+    margin-bottom: 15px;
+}
+
+.projetos .cards{
+    display: flex;
+    width: 100%;
+}
+
+
+.projetos .cards a{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    height: 392px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.projetos .cards ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+}
+
+.projetos .cards .card-item .textCard{
+    height: 60px;
+}
+
+.projetos .cards .card-item .info{
+    margin-top: 25px;
+}
+
+/*-------------------------------------------*/
+/*              SECÇÃO SOBRE NÓS             */
+/*-------------------------------------------*/
+
+.sobreNos{
+    width: 100%;
+    height: 90vh;
+    background-image: url(../Midia/background_cor.png);
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    gap: 10%;
+    padding: 50px;
+}
+
+.sobreNos .text{
+    position: relative;
+    display: block;
+    width: 50%;
+}
+
+/*Texto titulo*/
+
+.sobreNos .text .title{
+    font-family: 'Montserrat';
+    font-size: 60px;
+    font-weight: 700;
+    color: white;
+    background: var(--azuldin);
+    padding: 10px;
+}
+
+.sobreNos .text .title h3{
+    text-align: center;
+}
+
+/*Texto informativo*/
+
+.sobreNos .text .textInfo{
+    margin-top: 10%;
+    color: white;
+    background: var(--azuldin);
+    padding: 20px;
+}
+
+.sobreNos .text .textInfo p{
+    font-size: 27px;
+    line-height: 1.8;
+}
+
+/*Foto*/
+
+.sobreNos .foto{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sobreNos .foto img{
+    width: 60%;
+}
+
+/*-------------------------------------------*/
+/*      SECÇÃO MOTIVOS PARA PARTICIPAR       */
+/*-------------------------------------------*/
+
+.participar{
+    min-height: 100vh;
+    background-color: var(--azulescurin);
+}
+
+.participar .title h3{
+    text-align: center;
+    color: white;
+    font-size: 60px;
+    padding: 5px;
+}
+
+.motivos .robotivos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.motivos .robotivos img{
+    width: 25%;
+}
+
+.motivos .motivos-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.motivos .motivos-card .motivo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--larandin);
+    width: 400px;
+    height: 300px;
+    margin: 10px;
+    color: white;
+    border-radius: 20px;
+}
+
+.motivos .motivos-card .motivo .numero{
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 30px;
+    text-align: center;
+    height: 30%;
+}
+
+.motivos .motivos-card .motivo .text{
+    font-size: 20px;
+    text-align: justify;
+    padding: 25px;
+    font-weight: 300;
+    height: 70%;
+}
+
+/*-------------------------------------------*/
+/*           CARD FINAL - Contato            */
+/*-------------------------------------------*/
+
+.cardFinal{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.cardFinal .cartao{
+    width: 40%;
+    background-color: var(--azuldin);
+    color: white;
+    border-radius: 20px;
+}
+
+.cardFinal .cartao .title{
+    text-align: center;
+    margin-top: 25px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.cardFinal .cartao .text{
+    text-align: justify;
+    margin-top: 25px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 20px;
+}
+
+.cardFinal .cartao .redes{
+    display: flex;
+    margin-top: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardFinal .cartao .redes div{
+    width: 50%;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
