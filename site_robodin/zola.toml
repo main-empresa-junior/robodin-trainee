@@ -1,11 +1,11 @@
 # The URL the site will be built for
-base_url = "https://robodinuem.com.br"
+base_url = "https://main-empresa-junior.github.io/robodin-trainee/"
 
 # Whether to automatically compile all Sass files in the sass directory
-compile_sass = true
+compile_sass = false
 
 # Whether to build a search index to be used later on by a JavaScript library
-build_search_index = true
+build_search_index = false
 
 [markdown]
 
