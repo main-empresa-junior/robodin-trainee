@@ -5,7 +5,7 @@ weight = 60
 template = "projetos-page.html"
 
 [extra]
-imagem = "Midia/projetos/seguidor_linha.png"
+imagem = "/Midia/projetos/seguidor_linha.png"
 status = "Em andamento..."
 +++
 

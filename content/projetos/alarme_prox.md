@@ -6,7 +6,7 @@ template = "projetos-page.html"
 
 [extra]
 status = "Realizado"
-imagem = "Midia/projetos/alarme_prox.png"
+imagem = "/Midia/projetos/alarme_prox.png"
 +++
 
 
