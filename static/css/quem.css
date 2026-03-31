@@ -1,6 +1,5 @@
 body {
     background-color: var(--verde-primario);
-    padding-bottom: 50px;
     overflow-x: hidden;
 }
 
@@ -169,6 +168,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 50px;
 }
 
 .vision-text {

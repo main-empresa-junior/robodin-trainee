@@ -348,6 +348,7 @@ span{
 .participar{
     min-height: 100vh;
     background-color: var(--verde-escuro);
+    padding-bottom: 30px;
 }
 
 .participar .title h3{

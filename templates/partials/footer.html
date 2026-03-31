@@ -1,24 +1,63 @@
-<footer class="footer">
-	<div class="footer-container">
+<footer class="site-footer">
+    <div class="footer-content">
+      
+      <div class="footer-left-middle">
+        
+        <div class="footer-brand">
+          <div class="brand-top">
+            <span class="brand-name">ROBODIN</span>
+            <img src="{{ get_url(path='Midia/footer/Robodin.png') }}" alt="Logo Robodin" class="logo-robodin">
+          </div>
+          <div class="brand-bottom">
+            <img src="{{ get_url(path='Midia/footer/Frame 12 1.png') }}"  alt="Ícone de E-mail" class="icon-email">
+            <a href="mailto:robodinuem@gmail.com" class="email-text">robodinuem@gmail.com</a>
+          </div>
+        </div>
 
-		<!-- Instagram -->
-		<div class="footer-item">
-			<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="#2f8f89" stroke-width="2" viewBox="0 0 24 24">
-				<rect x="3" y="3" width="18" height="18" rx="5"/>
-				<circle cx="12" cy="12" r="4"/>
-				<circle cx="17.5" cy="6.5" r="1"/>
-			</svg>
-			<span>robodin.uem</span>
-		</div>
+        <div class="vertical-divider"></div>
 
-		<!-- Email -->
-		<div class="footer-item">
-			<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="#2f8f89" stroke-width="2" viewBox="0 0 24 24">
-				<rect x="3" y="5" width="18" height="14" rx="2"/>
-				<path d="M3 7l9 6 9-6"/>
-			</svg>
-			<span>robodin@uem.br</span>
-		</div>
+        <div class="footer-info">
+          <div class="info-block">
+            <h4 class="info-title">Endereço</h4>
+            <p class="info-text">
+              Avenida Colombo, 5790 - Jardim Universitário<br>
+              Universidade Estadual de Maringá<br>
+              Bloco C-56, sala 103<br>
+              CEP 87020-900
+            </p>
+          </div>
+          <div class="info-block">
+            <h4 class="info-title">Feito Por</h4>
+            <a href="https://www.instagram.com/main.ej.uem/" target="_blank">
+            <img src="{{ get_url(path='Midia/footer/main logo toda branca.png') }}" alt="Logo Main Empresa Júnior" class="logo-main"></a>
+          </div>
+        </div>
 
-	</div>
-</footer>
+      </div>
+
+      <div class="footer-nav-section">
+        <nav class="footer-links">
+			<a href="{{ get_url(path='@/_index.md') }}">Home</a>
+			<a href="{{ get_url(path='@/projetos/_index.md') }}">Projetos</a>
+			<a href="{{ get_url(path='@/eventos/_index.md') }}">Eventos</a>
+			<a href="{{ get_url(path='@/quem/_index.md') }}">Quem somos nós</a>
+        </nav>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/robodin.uem/" target="_blank">
+            <img src="{{ get_url(path='Midia/footer/instagram.png') }}" alt="Instagram" class="social-icon"></a>
+          <img src="{{ get_url(path='Midia/footer/github.png') }}" alt="GitHub" class="social-icon">
+          <img src="{{ get_url(path='Midia/footer/linkedin.png') }}" alt="LinkedIn" class="social-icon">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="horizontal-divider"></div>
+      <div class="legal-links">
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Política de Cookies</a>
+        <a href="#">Termos Legais</a>
+      </div>
+    </div>
+  </footer>

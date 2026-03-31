@@ -1,0 +1,228 @@
+.site-footer {
+  background-color: var(--laranja-principal);
+  min-height: 350px; /* Alterado de 'height' para 'min-height' */
+  width: 100%;
+  color: var(--branco);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1;
+}
+
+/* Agrupamento da esquerda e meio para gerenciar a linha vertical */
+.footer-left-middle {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Área da Logo e E-mail */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Alinha os itens à direita dessa coluna */
+  gap: 35px;
+}
+
+.brand-top {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.brand-name {
+  font-family: 'Montserrat', sans-serif; /* Montserrat específico para este texto */
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--branco)
+}
+
+.brand-bottom {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.email-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--branco);
+}
+
+/* Divisória Vertical */
+.vertical-divider {
+  width: 2px;
+  height: 160px;
+  background-color: var(--branco);
+  margin: 0 10px;
+}
+
+/* Área de Endereço */
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-title {
+  color: #546A76; /* Cor cinza/azulada da imagem */
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.info-text {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* Área de Navegação e Redes Sociais */
+.footer-nav-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.footer-links a {
+  color: var(--branco);
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+/* Barra Inferior com Links Legais */
+.footer-bottom {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px 30px 40px;
+}
+
+.horizontal-divider {
+  border-top: 2px dotted rgba(255, 255, 255, 0.6);
+  margin-bottom: 20px;
+}
+
+.legal-links {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.legal-links a {
+  color: var(--branco);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.logo-robodin {
+  width: 60px;
+  height: 60px;
+}
+
+.icon-email {
+  width: 24px;
+  height: 20px;
+}
+
+.logo-main {
+  width: 120px;
+  height: 55px;
+}
+
+.social-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 8px;
+}
+/* =========================================
+   RESPONSIVIDADE (Telas menores que 768px)
+   ========================================= */
+@media (max-width: 768px) {
+  .site-footer {
+    padding-top: 40px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 0 20px;
+  }
+
+  .footer-left-middle {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-brand {
+    align-items: center; /* Centraliza a logo e o contato */
+  }
+
+  /* Transforma a linha vertical em horizontal no mobile */
+  .vertical-divider {
+    width: 80%;
+    height: 2px;
+    margin: 10px auto;
+  }
+
+  .footer-info {
+    align-items: center;
+    text-align: center;
+  }
+
+  .info-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-nav-section {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links {
+    align-items: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  .footer-bottom {
+    padding: 0 20px 30px 20px;
+  }
+
+  .legal-links {
+    flex-direction: column; /* Empilha os links legais */
+    gap: 15px;
+    align-items: center;
+  }
+}
