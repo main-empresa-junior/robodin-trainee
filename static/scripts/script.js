@@ -17,7 +17,10 @@ new Swiper('.card-wrapper', {
 
   breakpoints: {
     0:{
-        slidesPerView: 3
+        slidesPerView: 1
+    },
+    768: {
+      slidesPerView: 3
     }
   }
 });

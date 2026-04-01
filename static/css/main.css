@@ -5,13 +5,13 @@
 .firstBackground{
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    height: 95vh;
     display: flex;
     justify-content: space-between;
     background-image: url(../Midia/background_cor.png);
     background-size: cover;
-    max-height: 100vh;
     background-attachment: fixed; /* Efeito de deixar fixada a imagem enquanto scrolla */
+    background-position: center;
 }
 
 .inicio{
@@ -105,6 +105,7 @@ span{
 
 .cards-section{
     display: block;
+    background-color: white;
 }
 
 .titulo{
@@ -203,7 +204,7 @@ span{
     flex-direction: column;
     padding: 18px;
     border-radius: 12px;
-    color: #000000;
+    color: var(--verde-primario);
     height: 480px;
 }
 
@@ -215,11 +216,13 @@ span{
 }
 
 .card-item .textCard h3{
+    color: var(--laranja-principal);
     margin-top: 10px;
     font-size: 25px;
 }
 
 .card-item .textCard .desc{
+    color: white;
     font-weight: 300;
     margin-top: 10px;
     flex-grow: 1;
@@ -275,6 +278,10 @@ span{
 
 .projetos .cards .card-item .textCard{
     height: 60px;
+}
+
+.projetos .cards .card-item .textCard h3{
+    color: black;
 }
 
 .projetos .cards .card-item .info{
@@ -452,4 +459,145 @@ span{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media (max-width:999px){
+
+    .firstBackground{
+        height: fit-content;
+        background-attachment: scroll;
+    }
+
+    .inicio{
+        padding: 30px;
+        margin-top: 0;
+    }
+
+    .inicio .textBox .title{
+        flex-direction: column;
+        gap: 5px
+        ;
+    }
+
+    .inicio .textBox .title h2{
+        font-size: 75px;
+    }
+
+    .inicio .textBox .title .robodin{
+        max-width: 180px;
+        margin-bottom: 25px;
+    }
+
+
+    .inicio .textBox p{
+        font-size: 20px;
+        text-align: justify;
+    }
+
+    .inicio .buttons{
+        flex-direction: column;
+    }
+
+    /*-------------------------------------------*/
+    /*            SECÇÃO CARDS - GERAL           */
+    /*-------------------------------------------*/
+
+    .eventos .titulo{
+        display: block;
+    }
+
+    .eventos .titulo .text{
+        text-align: center;
+    }
+
+    .eventos .titulo .botao, .eventos .titulo .vazio{
+        display: none;
+    }
+
+    .card-item a{
+        width: 70vw;
+    }
+
+    /*-------------------------------------------*/
+    /*       SECÇÃO CARDS - TOPICOS + DATA       */
+    /*-------------------------------------------*/
+
+    /*-------------------------------------------*/
+    /*           SECÇÃO CARDS - EVENTOS          */
+    /*-------------------------------------------*/   
+
+    .card-item .textCard .desc{
+        display: -webkit-box;
+        -webkit-line-clamp: 5; /*Limita numero de linhas para 5*/
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /*-------------------------------------------*/
+    /* SECÇÃO CARDS - PROJETOS          */
+    /*-------------------------------------------*/
+
+    .projetos .cards ul{
+        justify-content: center;
+    }
+
+    .projetos .cards a{
+        height: auto;
+    }
+
+    .projetos .cards .card-item .textCard{
+        height: fit-content;
+        text-align: center;
+    }
+
+    .projetos .cards .card-item .info{
+        margin-top: none;
+    }
+
+    /*-------------------------------------------*/
+    /*              SECÇÃO SOBRE NÓS             */
+    /*-------------------------------------------*/
+
+    .sobreNos{
+        min-height: fit-content;
+        background-attachment: scroll;
+    }
+    
+    .sobreNos .text{
+        width: auto;
+    }
+
+    .sobreNos .text h3{
+        font-size: 45px;
+    }
+
+    .sobreNos .text .textInfo p{
+        font-size: 20px;
+    }
+
+
+    /*-------------------------------------------*/
+    /*      SECÇÃO MOTIVOS PARA PARTICIPAR       */
+    /*-------------------------------------------*/
+    .participar .title h3{
+        font-size: 40px;
+    }
+
+    .motivos .motivos-card .motivo{
+        width: 85%;
+        height: fit-content;
+    }
+
+    .cardFinal .cartao{
+        width: 90%;
+    }
+    .cardFinal .cartao .redes{
+        flex-direction: column;
+    }
+
+    /*-------------------------------------------*/
+    /*           CARD FINAL - Contato            */
+    /*-------------------------------------------*/
+
 }
