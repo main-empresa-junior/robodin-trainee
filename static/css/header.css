@@ -32,3 +32,83 @@ header a {
 .nav-links a:hover {
     color: var(--branco);
 }
+
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+  transition: transform 0.3s
+}
+
+@media (max-width: 999px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--verde-primario);
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+    z-index: 1;
+    }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .nav-links a:first-of-type {
+    margin-top: 90px;
+  }
+
+  .nav-links a {
+    margin-top: 35px;
+    font-size: 25px;
+  }
+
+  .nav-links a:active {
+    color: white;
+    transition: transform 0.3s;
+  }
+}
+
+.nav-links.active {
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    } to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+  transition: transform 0.3s
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+  transition: transform 0.3s
+}
