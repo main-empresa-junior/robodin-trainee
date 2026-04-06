@@ -171,3 +171,60 @@
     font-size: 0.75rem;
     color: #777;
 }
+
+/* =========================================
+   Responsividade (Mobile)
+   ========================================= */
+
+/* Para telas de tablets e celulares (até 768px) */
+@media (max-width: 768px) {
+    
+    /* Ajuste do Título Principal */
+    .title-badge {
+        font-size: 1.5rem; /* Diminui um pouco o texto no celular */
+        padding: 10px 30px;
+    }
+
+    /* Grid de Projetos: Passa de 2 colunas para 1 coluna */
+    .grid-projetos {
+        grid-template-columns: 1fr; 
+        gap: 30px;
+        padding: 10px 20px;
+    }
+
+    /* Ajuste da altura da imagem no card para não ficar esticada */
+    .card img {
+        height: 200px;
+    }
+
+    /* Página de Detalhes: Empilha a sidebar abaixo do conteúdo principal */
+    .projeto-container {
+        grid-template-columns: 1fr; /* Ocupa a largura toda */
+        margin: 20px auto;
+    }
+
+    .projeto-titulo {
+        font-size: 1.6rem;
+    }
+
+    .projeto-imagem {
+        height: 250px; /* Reduz altura da imagem no celular */
+    }
+
+    /* Sidebar: Ajusta o espaçamento quando ela for para baixo */
+    .projeto-sidebar {
+        margin-top: 20px;
+    }
+}
+
+/* Para celulares muito pequenos (até 480px) */
+@media (max-width: 480px) {
+    .title-badge {
+        width: 90%; /* Garante que o badge não escape da tela */
+        box-sizing: border-box;
+    }
+
+    .card-content {
+        padding: 15px;
+    }
+}
