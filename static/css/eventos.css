@@ -136,3 +136,76 @@
 .footer-item .icon {
     font-size: 28px;
 }
+
+/* ============================= */
+/* RESPONSIVO */
+/* ============================= */
+@media (max-width: 768px) {
+
+    /* HERO */
+    .hero {
+        margin: 40px 0 20px 0;
+    }
+
+    .hero h1 {
+        font-size: 22px;
+        padding: 10px 20px;
+    }
+
+    /* CARD */
+    .atividade-card {
+        margin: 40px 0;
+    }
+
+    .card-container {
+        flex-direction: column;
+        padding: 25px;
+        gap: 25px;
+        border-radius: 25px;
+    }
+
+    /* Remove inversão no mobile */
+    .invertido .card-container {
+        flex-direction: column;
+    }
+
+    /* IMAGEM */
+    .card-image {
+        width: 100%;
+        flex: none;
+        padding: 15px;
+    }
+
+    /* TEXTO */
+    .card-content h2 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .card-content p {
+        font-size: 15px;
+        line-height: 1.6;
+        border-left: none;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    /* STATUS */
+    .status {
+        font-size: 12px;
+        padding: 6px 16px;
+        bottom: 10px;
+        left: 10px;
+    }
+
+    /* FOOTER */
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .footer-item {
+        font-size: 20px;
+    }
+}
